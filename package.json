@@ -1,0 +1,41 @@
+{
+  "name": "webpack-setup",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack",
+    "watch": "cross-env NODE_ENV=development webpack --watch",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andkerel/webpack-setup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "jshint": "^2.10.2",
+    "jshint-loader": "github:arizvisa/jshint-loader#webpack-4",
+    "node-sass": "^4.11.0",
+    "postcss-scss": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.30.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "postcss": "^7.0.14",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-loader": "^3.0.0",
+    "svgxuse": "^1.2.6"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "bitwise": true,
+  "browser": true,
+  "curly": true,
+  "esversion": 6,
+  "forin": true,
+  "freeze": true,
+  "latedef": false,
+  "nocomma": true,
+  "nonbsp": true,
+  "strict": false,
+  "undef": true,
+  "unused": true,
+  "eqnull": true,
+  "predef": ["svgxuse"],
+  "asi": true, //turn off missing semicolons
+  "laxbreak": true,
+  "loopfunc": true,
+  "module": true,
+  "validthis": true // Tolerate using this in a non-constructor
+}
