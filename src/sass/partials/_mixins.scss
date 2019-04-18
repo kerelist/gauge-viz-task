@@ -1,0 +1,77 @@
+//EXPONENT
+//https://css-tricks.com/snippets/sass/power-function/
+
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+//UNDERLINE STYLES
+@mixin text-underline() {
+  border-bottom: 1px solid $text;
+  &:hover, &:focus {
+    border-bottom: 1px solid $teal;
+  }
+}
+@mixin title-underline() {
+  border-bottom: 2px solid transparent;
+  &:hover, &:focus {
+    border-bottom: 2px solid $purple;
+  }
+}
+@mixin underline-reset() {
+  border-bottom: none;
+  &:hover, &:focus {
+    border-bottom: none;
+  }
+}
+
+
+
+//FONT SETUP
+//change variables to change the scale of base to h1 sizing
+
+@mixin font-setup($base-size, $header-font, $body-font, $font-units, $line-height, $size-ratio, $font-colour) {
+
+  //size ratio references @ http://type-scale.com/
+
+  body {
+    font-size: #{$base-size}$font-units;
+    font-family: $body-font;
+    line-height: $line-height;
+    color: $font-colour;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font;
+    font-weight: 700;
+  }
+
+  h5 {
+    font-size: #{$base-size * pow($size-ratio, 0.5)}$font-units;
+  }
+
+  h4 {
+    font-size: #{$base-size * pow($size-ratio, 1)}$font-units;
+  }
+
+  h3 {
+    font-size: #{$base-size * pow($size-ratio, 2)}$font-units;
+  }
+
+  h2 {
+    font-size: #{$base-size * pow($size-ratio, 3)}$font-units;
+  }
+
+  h1 {
+    font-size: #{$base-size * pow($size-ratio, 4)}$font-units;
+  }
+
+}
