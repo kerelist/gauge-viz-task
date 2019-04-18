@@ -42,6 +42,8 @@ $RECYCLE.BIN/
 **/src/assets/images/svg-min/
 /src/svg
 **.**.map
+/script.js
+/style.css
 
 #editor specific files
 .editorconfig
