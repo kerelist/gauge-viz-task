@@ -13,18 +13,27 @@
     <h1>The Gecko-O-Meter 🦎</h1>
   </header>
   <main role="main">
+    <p class="fetching-text" id="loading">
+      Fetching results...
+    </p>
     <div class="meter-container">
       <p>
         <span id="m-value"></span>
-        <span id="m-min"></span>
-        <span id="m-max"></span>
-        <span id="m-format"></span>
         <span id="m-unit"></span>
+      </p>
+      <div class="base">
+        <div class="meter-line">
+          <div class="circle"></div>
+        </div>
+      </div>
+      <p class="minmax">
+        <span class="min" id="m-min"></span>
+        <span class="max" id="m-max"></span>
       </p>
     </div>
   </main>
   <footer role="contentinfo">
-      <p>&copy; Andrea Kereliuk 2019</p>
+
   </footer>
   <script src="script.js"></script>
 </body>
