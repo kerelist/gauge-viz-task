@@ -8,6 +8,7 @@
 
 `npm run watch` - runs the above and watches for changes.
 
+**note `npm run build` does not work** - this is my old webpack setup and was not optimised for webpack 4 when i started and i didn't have time to fix the prod run. 
 `npm run build` - for production. runs babel, js bundler, js uglify, sass compiler, and sass minification.
 
 (see `scripts` in `package.json` for details)
@@ -23,11 +24,13 @@ on start/restart, the following happens:
 4. if there is no data (i.e. an error), a "There is no value available." message will display.
 
 ## webpack
-This setup is meant for simple projects (i.e. one output css file from sass, one js bundle only) and is from my own webpack setup ([code & further notes on github](https://github.com/kerelist/webpack-setup)).
+
+this setup is meant for simple projects (i.e. one output css file from sass, one js bundle only) and is from my own webpack setup ([code & further notes on github](https://github.com/kerelist/webpack-setup)).
 
 ## to be improved
 
 next steps to improve this would be:
+- fix `npm run build` based on this error: `webpack.optimize.UglifyJsPlugin has been removed, please use config.optimization.minimize instead.`. this way the prod build can have minified code
 - add the currency unit to the min and max numbers - i just fully missed this the first time around!
 - better error handling. i would like there to be some animated fire or emoji or something when the server returns the error "the server is on fire"
 - some sort of testing?
