@@ -16,21 +16,23 @@
     <p class="fetching-text" id="loading">
       Fetching results...
     </p>
-    <div class="meter-container">
-      <p>
-        <span id="m-value"></span>
-        <span id="m-unit"></span>
+    <div class="meter-container" role="presentation">
+      <p class="valunit text">
+        <span id="m-value">val</span>
+        <span id="m-unit">unit</span>
       </p>
       <div class="base">
         <div class="meter-line">
           <div class="circle"></div>
         </div>
       </div>
-      <p class="minmax">
-        <span class="min" id="m-min"></span>
-        <span class="max" id="m-max"></span>
+      <p class="minmax text">
+        <span id="m-min">min</span>
+        <span id="m-max">max</span>
       </p>
     </div>
+    <div class="screenreader-text" role="alert"></div>
+    <button class="retry" id="retry">try again</button>
   </main>
   <footer role="contentinfo">
 

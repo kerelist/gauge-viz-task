@@ -13,6 +13,23 @@
     position: relative;
   }
 
+  .text {
+    font-size: 2.8rem;
+  }
+
+  .valunit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .minmax {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
   .meter-line {
     position: relative;
     top: -10px;
@@ -40,6 +57,34 @@
 
 }
 
+.screenreader-text {
+  display: none;
+}
+
+.retry {
+  background-color: #efefef;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 16px;
+  font-size: 1.8rem;
+  transition: background-color 0.3s ease;
+
+  &.active {
+    cursor: pointer;
+    background-color: #C8E7E2;
+    color: black;
+
+    &:hover, &:focus {
+      background-color: #8EC449;
+      color: white;
+    }
+  }
+}
 
 .fetching-text {
   animation: fadeIn 0.75s infinite alternate;

@@ -10,6 +10,10 @@ var value = document.getElementById('m-value'),
     format = document.getElementById('m-format'),
     unit = document.getElementById('m-unit');
 
+//state holders
+var isLoading = true,
+    hasResults = false;
+
 fetch(url).then(response => response.json()).then((data) => {
   console.log(data);
 })
