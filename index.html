@@ -19,11 +19,13 @@
     <div class="meter-container" role="presentation">
       <p class="valunit text">
         <span id="m-value">val</span>
-        <span id="m-unit">unit</span>
       </p>
       <div class="base">
-        <div class="meter-line">
+        <div class="meter-line" id="meter">
           <div class="circle"></div>
+        </div>
+        <div class="impossible" id="impossible">
+          These numbers are impossible!
         </div>
       </div>
       <p class="minmax text">
@@ -31,7 +33,7 @@
         <span id="m-max">max</span>
       </p>
     </div>
-    <div class="screenreader-text" role="alert"></div>
+    <div class="screenreader-text" id="sr-text" role="alert"></div>
     <button class="retry" id="retry">try again</button>
   </main>
   <footer role="contentinfo">
